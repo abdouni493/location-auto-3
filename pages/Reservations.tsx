@@ -114,7 +114,7 @@ const Reservations: React.FC<{ lang: Language, user: UserSession }> = ({ lang, u
       {loading ? <TableSkeleton /> : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-1 no-print">
           <AnimatePresence mode="popLayout">
-            {paginatedReservations.map((res) => {
+            {paginatedReservations.length ? paginatedReservations.map((res) => {
               const car = properties.find(p => p.id === res.vehicleId);
               const remaining = res.totalAmount - res.paidAmount;
               const paymentPercent = (res.paidAmount / res.totalAmount) * 100;
