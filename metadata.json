@@ -1,0 +1,7 @@
+{
+  "name": "ImmoGestion AI",
+  "description": "Une plateforme moderne de gestion locative avec analyses IA intégrées, supportant le français et l'arabe avec une mise en page responsive optimisée.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
