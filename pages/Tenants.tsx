@@ -30,7 +30,7 @@ const ClientCard = memo(({ client, t, isRtl, onEdit, onViewDetails, onViewHistor
   return (
     <motion.div 
       layout initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} 
-      className="group bg-white rounded-[4rem] border border-slate-100 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.04)] hover:shadow-2xl transition-all duration-500 relative flex flex-col h-[560px] overflow-hidden"
+      className="group bg-white rounded-[4rem] border border-slate-100 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.04)] hover:shadow-2xl transition-all duration-500 relative flex flex-col h-[560px] overflow-visible"
     >
       <div className="p-10 pb-6 flex flex-col items-center text-center">
         <div className="relative mb-8">
@@ -51,7 +51,7 @@ const ClientCard = memo(({ client, t, isRtl, onEdit, onViewDetails, onViewHistor
       </div>
 
       <div className="absolute top-8 right-8 z-[60]">
-        <button onClick={onToggleMenu} className={`p-3.5 backdrop-blur-xl rounded-2xl transition-all shadow-xl border border-slate-100 ${isActive ? 'bg-slate-900 text-white shadow-slate-200' : 'bg-white/80 text-slate-400 hover:bg-slate-900 hover:text-white'}`}>
+        <button onClick={onToggleMenu} className={`p-2.5 rounded-xl transition-all shadow-xl border border-slate-100 ${isActive ? 'bg-slate-900 text-white shadow-slate-200' : 'bg-white/80 text-slate-400 hover:bg-slate-900 hover:text-white'}`}>
           <MoreVertical size={22} />
         </button>
         <AnimatePresence>

@@ -135,7 +135,7 @@ const Properties: React.FC<{ lang: Language, user: UserSession }> = ({ lang, use
           {paginatedProperties.map((prop) => (
             <motion.div 
               key={prop.id} layout initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-              className="group bg-white rounded-[3.5rem] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 relative flex flex-col h-[660px] z-10 hover:shadow-[0_40px_90px_-20px_rgba(0,0,0,0.12)] overflow-hidden"
+              className="group bg-white rounded-[3.5rem] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-500 relative flex flex-col h-[660px] z-10 hover:shadow-[0_40px_90px_-20px_rgba(0,0,0,0.12)] overflow-visible"
             >
               <div className="relative h-64 shrink-0 overflow-hidden">
                  {prop.image ? (
@@ -160,7 +160,7 @@ const Properties: React.FC<{ lang: Language, user: UserSession }> = ({ lang, use
                 <div className="absolute top-6 right-6 z-[60]">
                   <button 
                     onClick={() => setActiveMenu(activeMenu === prop.id ? null : prop.id)}
-                    className={`p-3 backdrop-blur-xl rounded-2xl transition-all shadow-2xl border border-white/20 group/btn ${activeMenu === prop.id ? 'bg-white text-slate-900' : 'bg-white/10 text-white hover:bg-white hover:text-slate-900'}`}
+                    className={`p-2.5 rounded-xl transition-all shadow-2xl border border-white/20 ${activeMenu === prop.id ? 'bg-white text-slate-900' : 'bg-white/80 text-slate-400 hover:bg-white hover:text-slate-900'}`}
                   >
                     <MoreVertical size={22} />
                   </button>
